@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Since 1995 KC-OSS has been teaching primitive &amp; traditional survival skills. Challenge yourself mentally &amp; physically with our survival courses." />
+    <meta name="keywords" content="education, learning, professional training, survival" />
+    <meta name="author" content="Ryan Pflugradt" />
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="~/Content/images/logo32x32.png" />
+    <title>@ViewBag.Title | KC Outdoor Survival School</title>
+    <link href="~/Content/css/custom.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="social-icons__group">
+                <i class="fa fa-facebook-square" aria-hidden="true" style="font-size: 2rem; color: #0470E6"></i>
+                <i class="fa fa-twitter" aria-hidden="true" style="font-size: 2rem; color: #1DA1F2"></i>
+                <i class="fa fa-instagram" aria-hidden="true" style="font-size: 2rem;"></i>
+            </div>
+            <div class="header__logo-company--containter">
+                <div class="header__logo-img">
+                    <a href="@Url.Action("Index", "Home")"><img src="~/Content/images/kc_oss--logo.png" alt="Company Logo" /></a>
+                </div>
+                <div class="header__company-name-slogan">
+                    <h1>KC Outdoor Survival School</h1>
+                    <p>Teaching you outdoor survival skills</p>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-ul">
+                <li><a class="nav-item" href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a class="nav-item" href="@Url.Action("Classes", "Home")">Classes</a></li>
+                <li><a class="nav-item" href="@Url.Action("Team", "Home")">Team</a></li>
+                <li><a class="nav-item" href="@Url.Action("Contact", "Home")">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    @RenderBody()
+
+    <footer>
+        <div class="footer__rights">
+            <p>All Rights Reserved @DateTime.Now.Year</p>
+        </div>
+        <div class="social-icons__group">
+            <i class="fa fa-facebook-square" aria-hidden="true" style="font-size: 2rem; color: #0470E6"></i>
+            <i class="fa fa-twitter" aria-hidden="true" style="font-size: 2rem; color: #1DA1F2"></i>
+            <i class="fa fa-instagram" aria-hidden="true" style="font-size: 2rem;"></i>
+        </div>
+    </footer>
+
+    <!-- Set the active nav style -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const activeNav = document.getElementsByClassName("nav-item");
+            for (var i = 0; i < activeNav.length; i++) {
+                if (activeNav[i].pathname === window.location.pathname) {
+                    activeNav[i].classList.add("active");
+                }
+            }
+        });
+    </script>
+</body>
+</html>

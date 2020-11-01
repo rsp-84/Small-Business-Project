@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Team";
+}
+
+<div class="team-grid__container">
+    <section id="team__info">
+        @{ Html.RenderPartial("_Leadership"); }
+        @{ Html.RenderPartial("_Sales"); }
+        @{ Html.RenderPartial("_Admin"); }
+        @{ Html.RenderPartial("_Instructors"); }
+    </section>
+
+    <aside id="team__departments">
+        <h3>By Department</h3>
+        <ul class="team__ul">
+            <li id="clkLeadership"><h4>Leadership</h4></li>
+            <li id="clkSales"><h4>Sales</h4></li>
+            <li id="clkAdmin"><h4>Administration</h4></li>
+            <li id="clkInstructors"><h4>Instructors</h4></li>
+        </ul>
+    </aside>
+</div>
+
+<script src="~/Content/js/team.js"></script>
